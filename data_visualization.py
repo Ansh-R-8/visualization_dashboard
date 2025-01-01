@@ -77,8 +77,8 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
             plt.figure(figsize=(12, 8))
             top_10_dishes.plot(kind='barh', color=sns.color_palette('Dark2'))
             plt.title("Top 10 Most Frequent Combinations of Dish-1 or Dish-2")
-            plt.xlabel("Dish Combination")
-            plt.ylabel("Frequency")
+            plt.xlabel("Frequency")
+            plt.ylabel("Dish Combination")
             plt.gca().spines[['top', 'right']].set_visible(False)
 
             for index, value in enumerate(top_10_dishes):
@@ -89,10 +89,10 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
 
         elif meal_type == "Lunch" and lunch_data is not None:
             st.subheader("Lunch Analysis")
-            create_bar_chart(lunch_data, 'Dal', "Most Occurring Dal", "Dal", "Frequency")
-            create_bar_chart(lunch_data, 'Rice', "Most Occurring Rice", "Rice", "Frequency")
-            create_bar_chart(lunch_data, 'Bread', "Most Occurring Breads", "Breads", "Frequency")
-            create_bar_chart(lunch_data, 'Salad', "Salad Type Distribution", "Count", "Salad Type")
+            create_bar_chart(lunch_data, 'Dal', "Most Occurring Dal", "Frequency", "Dal")
+            create_bar_chart(lunch_data, 'Rice', "Most Occurring Rice", "Frequency", "Rice")
+            create_bar_chart(lunch_data, 'Bread', "Most Occurring Breads", "Frequency", "Bread")
+            create_bar_chart(lunch_data, 'Salad', "Salad Type Distribution", "Salad Type", "Count")
 
             st.subheader("Combined Dish Analysis")
             lunch_data['Dish 1'] = lunch_data['Dish 1'].str.strip()
@@ -106,8 +106,8 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
             plt.figure(figsize=(12, 8))
             top_10_dishes.plot(kind='barh', color=sns.color_palette('Dark2'))
             plt.title("Top 10 Most Frequent Combinations of Dish-1 or Dish-2")
-            plt.xlabel("Dish Combination")
-            plt.ylabel("Frequency")
+            plt.xlabel("Frequency")
+            plt.ylabel("Dish Combination")
             plt.gca().spines[['top', 'right']].set_visible(False)
 
             for index, value in enumerate(top_10_dishes):
@@ -118,10 +118,10 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
         elif meal_type == "Dinner" and dinner_data is not None:
             st.subheader("Dinner Analysis")
             create_bar_chart(dinner_data, 'Curry', "Most Occurring Curry", "Count", "Main Course")
-            create_bar_chart(dinner_data, 'Dal Type', "Most Occurring Dal Types", "Count", "Dessert")
+            create_bar_chart(dinner_data, 'Dal Type', "Most Occurring Dal Types", "Count", "Dal")
             create_bar_chart(dinner_data, 'Type of dish made of rice', "Most Occurring type of dish made of rice", "Count", "Dish made of rice")
-            create_bar_chart(dinner_data, 'Salad', "Most Occurring Salad", "Salad", "Dessert")
-            create_bar_chart(dinner_data, 'Soup', "Most Occurring soups", "Soups", "Dessert")
+            create_bar_chart(dinner_data, 'Salad', "Most Occurring Salad", "Count", "Salad")
+            create_bar_chart(dinner_data, 'Soup', "Most Occurring soups", "Count", "Soups")
             create_bar_chart(dinner_data, 'Dessert', "Dessert Distribution", "Count", "Dessert")
 
             st.subheader("Combined Dish Analysis")
@@ -136,8 +136,8 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
             plt.figure(figsize=(12, 8))
             top_10_dishes.plot(kind='barh', color=sns.color_palette('Dark2'))
             plt.title("Top 10 Most Frequent Combinations of Dish-1 or Dish-2")
-            plt.xlabel("Dish Combination")
-            plt.ylabel("Frequency")
+            plt.xlabel("Frequency")
+            plt.ylabel("Dish Combination")
             plt.gca().spines[['top', 'right']].set_visible(False)
 
             for index, value in enumerate(top_10_dishes):

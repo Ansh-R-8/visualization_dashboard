@@ -1,0 +1,8 @@
+python 3.12.4
+matplotlib
+networkx
+pandas
+streamlit
+pyvis
+adjustText
+seaborn

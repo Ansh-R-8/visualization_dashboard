@@ -75,15 +75,17 @@ if any([breakfast_data is not None, lunch_data is not None, dinner_data is not N
             top_10_dishes = dish_counts.head(10)
 
             plt.figure(figsize=(12, 8))
-            top_10_dishes.plot(kind='barh', color=sns.color_palette('Dark2'))
+            top_10_dishes.plot(kind='barh', color='skyblue', edgecolor='black')
             plt.title("Top 10 Most Frequent Combinations of Dish-1 or Dish-2")
             plt.xlabel("Frequency")
             plt.ylabel("Dish Combination")
-            plt.gca().spines[['top', 'right']].set_visible(False)
+            plt.xticks(rotation=45, ha='right')
+            #plt.gca().spines[['top', 'right']].set_visible(False)
 
             for index, value in enumerate(top_10_dishes):
                 plt.text(value + 0.1, index, str(value), va='center', fontweight='bold')
-            st.pyplot(plt)
+            plt.tight_layout()
+            #st.pyplot(plt)
             plt.show()
             
 
